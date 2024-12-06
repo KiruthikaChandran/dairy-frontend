@@ -13,18 +13,18 @@ const Signup = () => {
 
     return (
         <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-            <h3> <i>Create an account</i> </h3>
+            <h3> <i>Sign up</i> </h3>
             <input 
-                type="Email" 
-                {...register("Email", { required: 'required field' })}
-                placeholder="Email"
+                type="email" 
+                {...register("email", { required: 'required field' })}
+                placeholder="email"
                 autoComplete="off"
             />
             <p>{ errors.email?.message }</p>
             <input 
-                type="Password" 
-                {...register("Password", { required: 'required field' })}
-                placeholder="Password"
+                type="password" 
+                {...register("password", { required: 'required field' })}
+                placeholder="password"
             />
             <p>{ errors.password?.message }</p>
             <button 

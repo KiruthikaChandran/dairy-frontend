@@ -13,25 +13,25 @@ const Login = () => {
 
     return (
         <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-            <h3> <i>Quick Contact</i> </h3>
+            <h3> <i>Log In</i> </h3>
             <input 
-                type="Email" 
-                {...register("Email", { required: 'required field' })}
-                placeholder="Email"
+                type="email" 
+                {...register("email", { required: 'required field' })}
+                placeholder="email"
                 autoComplete="off"
             />
             <p>{ errors.email?.message }</p>
             <input 
-                type="Password" 
-                {...register("Password", { required: 'required field' })}
-                placeholder="Password"
+                type="password" 
+                {...register("password", { required: 'required field' })}
+                placeholder="password"
             />
             <p>{ errors.password?.message }</p>
             <button 
                 className={styles.submit} type="submit"
                 disabled={loading}
             > 
-                Log In 
+                Login
             </button>
             {error && <div>{ error }</div>}
         </form>
